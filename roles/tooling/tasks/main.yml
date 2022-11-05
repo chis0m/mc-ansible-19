@@ -2,9 +2,9 @@
 - name: mounting share(s)
   mount:
     path: /var/www
-    src: fs-06a94046bc85a62be:/
+    src: fs-0788be4a1de811324:/
     fstype: efs
-    opts: nosuid,noexec,defaults,tls,accesspoint=fsap-07c2667e1055ea161
+    opts: nosuid,noexec,defaults,tls,accesspoint=fsap-0a9106a761ad2cbef
     state: mounted
 
 - name: install httpd on the webserver
@@ -16,21 +16,21 @@
 - name: install mod_ssl on the webserver
   ansible.builtin.yum:
     name: "mod_ssl"
-    state: present 
+    state: present
 
 - name: install PHP
   ansible.builtin.yum:
     name:
-      - php 
+      - php
       - php-mysqlnd
-      - php-gd 
+      - php-gd
       - php-curl
       - php-common
       - php-fpm
       - php-mbstring
-      - php-opcache 
+      - php-opcache
       - php-xml
-      - php-intl 
+      - php-intl
       - php-json
     state: present
 
@@ -47,8 +47,8 @@
 
 - name: ensure httpd is started and enabled
   ansible.builtin.service:
-     name: httpd 
-     state: started 
+     name: httpd
+     state: started
      enabled: yes
 
 

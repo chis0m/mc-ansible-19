@@ -23,7 +23,7 @@ http {
     keepalive_timeout   65;
     types_hash_max_size 2048;
 
-    
+
     default_type        application/octet-stream;
 
     # Load modular configuration files from the /etc/nginx/conf.d directory.
@@ -36,25 +36,25 @@ http {
         listen       443 http2 ssl;
         listen       [::]:443 http2 ssl;
         root          /var/www/html;
-        server_name  *.david.toolingabby.com;
-        
-        
-     
-        
-        ssl_certificate /etc/ssl/certs/ACS.crt;
-        ssl_certificate_key /etc/ssl/private/ACS.key;
+        server_name  *.chisomejim.click;
+
+
+
+
+        ssl_certificate /etc/ssl/certs/mc.crt;
+        ssl_certificate_key /etc/ssl/private/mc.key;
         ssl_dhparam /etc/ssl/certs/dhparam.pem;
 
-      
+
         location /healthstatus {
         access_log off;
         return 200;
        }
-    
-         
+
+
         location / {
             proxy_set_header             Host $host;
-            proxy_pass                   https://internal-ialb-506677692.us-east-1.elb.amazonaws.com/; 
+            proxy_pass                   https://internal-MC-Dev-Internal-ALB-1397159863.us-east-1.elb.amazonaws.com/;
            }
     }
 }
