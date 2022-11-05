@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_MC_sonarqube
+- hosts: tag_Name_MC_Dev_SonarQube_EC2
   user: ubuntu
   become: true
   roles:

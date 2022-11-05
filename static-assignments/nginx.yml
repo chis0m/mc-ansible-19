@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_MC_nginx
+- hosts: tag_Name_MC_Dev_ProxyServer_ASG
   become: true
   roles:
     - nginx

@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_MC_wordpress
+- hosts: tag_Name_MC_Dev_WordpressApp_LT
   become: true
   roles:
      - wordpress
