@@ -11,18 +11,18 @@
   - name: wordpress assignment
     import_playbook: ../static-assignments/wordpress.yml
 
-  - hosts: tag_Name_MC_Dev_Jenkins_EC2
-  - name: jenkins assignment
-    import_playbook: ../static-assignments/jenkins.yml
-
-  - hosts: tag_Name_MC_Dev_Artificatory_EC2
-  - name: artifactory assignment
-    import_playbook: ../static-assignments/jfrog.yml
-
-  - hosts: tag_Name_MC_Dev_SonarQube_EC2
-    user: ubuntu
-  - name: sonarqube assignment
-    import_playbook: ../static-assignments/sonar.yml
+#  - hosts: tag_Name_MC_Dev_Jenkins_EC2
+#  - name: jenkins assignment
+#    import_playbook: ../static-assignments/jenkins.yml
+#
+#  - hosts: tag_Name_MC_Dev_Artificatory_EC2
+#  - name: artifactory assignment
+#    import_playbook: ../static-assignments/jfrog.yml
+#
+#  - hosts: tag_Name_MC_Dev_SonarQube_EC2
+#    user: ubuntu
+#  - name: sonarqube assignment
+#    import_playbook: ../static-assignments/sonar.yml
 
 
 
