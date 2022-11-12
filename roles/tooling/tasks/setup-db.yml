@@ -5,7 +5,7 @@
 
 - name: create database
   community.mysql.mysql_db:
-    login_host: "terraform-2022111211092408580000000c.c97nxzgvmvn6.us-east-1.rds.amazonaws.com"
+    login_host: "terraform-20221112171529345600000008.c97nxzgvmvn6.us-east-1.rds.amazonaws.com"
     login_user: "admin"
     login_password: "(Master##123)"
     name: toolingdb
@@ -19,7 +19,7 @@
     regexp: "{{ item.regexp }}"
     replace: "{{ item.line }}"
   loop:
-    - { regexp: '^mysql.tooling.svc.cluster.local', line: "terraform-2022111211092408580000000c.c97nxzgvmvn6.us-east-1.rds.amazonaws.com" }
+    - { regexp: '^mysql.tooling.svc.cluster.local', line: "terraform-20221112171529345600000008.c97nxzgvmvn6.us-east-1.rds.amazonaws.com" }
     - { regexp: '^admin', line: "admin" }
     - { regexp: '^tooling', line: "toolingdb" }
     - { regexp: '^admin', line: "(Master##123)" }
